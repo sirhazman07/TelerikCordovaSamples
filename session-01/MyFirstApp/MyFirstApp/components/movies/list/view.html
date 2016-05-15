@@ -1,0 +1,12 @@
+<div data-role="view" data-title="Movie List" data-layout="main"
+     data-model="app.movies"
+     data-show="app.movies.onShow" data-after-show="app.movies.afterShow">
+
+    <ul data-role="listview" data-style="inset" 
+        data-bind="source: dataSource"
+        data-template="movie-item-template"></ul>
+
+    <script type="text/x-kendo-template" id="movie-item-template">
+        #: data.title #
+    </script>
+</div>

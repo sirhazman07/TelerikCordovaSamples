@@ -1,0 +1,16 @@
+<div data-role="view" data-title="Students" data-layout="main" data-model="app.students" 
+     data-show="app.students.onShow" data-after-show="app.students.afterShow">
+    <ul data-role="listview" data-style="inset"
+        data-bind="source: data"
+        data-template="student-list-template">
+    </ul>
+
+    <script type="text/x-kendo-template" id="student-list-template">
+        <a href="\\#details?id=#: data.id #">#: data.firstName #  #: data.lastName #</a>
+    </script>
+</div>
+
+<div data-role="view" id="details" data-layout="main" data-title="Students Details"
+     data-model="app.studentDetails" data-show="app.studentDetails.onShow" >
+    <h3 data-bind="text: fullName"></h3>
+</div>
