@@ -1,0 +1,48 @@
+{
+  "ProjectName": "CourseFantasticApp",
+  "ProjectGuid": "dd1f29a1-ae98-48e0-9698-0cf4098ee581",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.CourseFantasticApp",
+  "DisplayName": "CourseFantasticApp",
+  "Author": "",
+  "Description": "CourseFantasticApp",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "4.0.0",
+  "AndroidPermissions": [
+    "android.permission.INTERNET"
+  ],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "true",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [
+    "ID_CAP_NETWORKING",
+    "ID_CAP_WEBBROWSERCOMPONENT"
+  ],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{5f906a7d-7a2a-4644-a63d-ca15ce7e8ce9}",
+  "WP8ProductID": "{bab6200b-5036-4232-96ee-2ac5ba71b19b}",
+  "WPSdk": "8.0",
+  "WP8PackageIdentityName": "1234Telerik.CourseFantasticApp",
+  "WP8WindowsPublisherName": "CN=Telerik",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ],
+  "CorePlugins": [
+    "com.phonegap.plugins.sqlite@1.1.0"
+  ]
+}

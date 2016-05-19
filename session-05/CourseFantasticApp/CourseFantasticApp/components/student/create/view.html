@@ -1,0 +1,40 @@
+<div data-role="view" data-layout="main" data-title="Create Student" data-model="app.cstudent"
+     data-show="app.cstudent.onShow" data-after-show="app.cstudent.afterShow" data-use-native-scrolling="true">
+
+    <!--always enclose your elements in a form-->
+    <form id="create" >
+        <div class="km-invalid">
+            <span data-ng-form="FirstName" class="km-invalid-msg" ></span>
+        </div>
+        <ul data-role="listview" data-style="inset">
+            <li>
+                <label><span> First Name </span><input name="FirstName" type="text" data-bind="value: firstName" placeholder="first Name" required /></label>
+            </li>
+            <li>
+                <label><span> Last Name</span><input name="LastName" type="text" data-bind="value: lastName" placeholder="Last Name" required /></label>
+            </li>
+            <li>
+                <label>
+                    <span> Id </span> <input name="StudentId" type="text" data-bind="value: studentId" required/>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span> Email </span> <input name="Email" type="email" data-bind="value: email" required/>
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span> Mobile </span><input name="Mobile" type="text" data-bind="value: mobile" required />
+                </label>
+            </li>
+            <li>
+                <!--The form button can be inside or outside the form
+                but use the class and pass km styling atributtes and a bind to click function-->
+                <button data-role="button" class="km-primary km-large km-justified" data-bind="click: createStudent">Create</button>
+            </li>
+        </ul>
+        
+    </form>
+       
+</div> 
