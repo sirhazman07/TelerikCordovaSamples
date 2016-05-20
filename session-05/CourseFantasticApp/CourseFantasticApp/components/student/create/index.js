@@ -1,19 +1,16 @@
 'use strict';
 
-
-
 (function () {
     var validator;
 
-    //we get and use the validator to check the fields
+    //we get and use the validator to check the fields on the Form / or View Model
 
-    var viewModel = app.cstudent = kendo.observable({
+    var viewModel = kendo.observable({
         onShow: function () {
             validator = $("#create").kendoValidator().data('kendoValidator');
         },
         afterShow: function () { },
         createStudent: function () {
-
             if (!validator.validate()) {
                 return false;
             }
@@ -28,7 +25,7 @@
         }
     });
 
-    app.cstudent = viewModel;
+    
 
     //Create a student on DB function
     var dbAddStudent = function (firstName, lastName, studentId, email, mobile) {
@@ -45,5 +42,9 @@
                     //debugger;
                 });
         });
-    };
+    }
+
+    app.cstudent = viewModel;
+
+
 })();

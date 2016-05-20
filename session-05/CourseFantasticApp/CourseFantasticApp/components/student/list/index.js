@@ -2,17 +2,17 @@
 (function () {
     var viewModel = kendo.observable({
         onShow: function () {
-            debugger;
+            //debugger;
             var data;
         
             var db = app.db;
             db.transaction(function (tx) {
-                tx.executeSql("Select * from Student sort by Id desc", [], function (resultSet) {
+                tx.executeSql("Select * From Student", [], function (tx,resultSet) {
                     debugger;
                     var student = resultSet.rows[0];
                     dataSource.add(student);
                 }, function (tx, error) {
-                    debugger;
+                    //debugger;
                 });
             });
         },
@@ -31,6 +31,8 @@
     app.students = viewModel;
 
     app.students.set('data', dataSource);
+
+
 })();
 
 app.studentDetails = kendo.observable({

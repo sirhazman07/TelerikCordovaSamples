@@ -14,7 +14,7 @@
             app.mobileApp = new kendo.mobile.Application(document.body, {
                 transition: 'slide',
                 skin: 'nova',
-                initial: 'components/student/list/view.html'
+                initial: 'components/student/create/view.html'
             });
         });
     };
@@ -22,7 +22,7 @@
     var dbInit = function () {
         var db = app.db;
         db.transaction(function (tx) {
-            debugger;
+            //debugger;
             tx.executeSql("CREATE TABLE IF NOT EXISTS Student(Id integer primary key asc, " +
                 "FirstName varchar(250), LastName varchar(250), StudentId char(8), Email varchar(250), " +
                 "Mobile char(12))", []);
@@ -32,7 +32,7 @@
     if (window.cordova) {
         document.addEventListener('deviceready', function () {
             //Check to see if the phone is in simulator mode or if its using the sql simulator
-            debugger;
+            //debugger;
             if (navigator.simulator === true) {
                 app.db = window.openDatabase("CourseFantastic.sqlite", "1.1", "Course Fantastic App", 20000);
             }
@@ -43,8 +43,8 @@
             if (navigator && navigator.splashscreen) {
                 navigator.splashscreen.hide();
             }
-            bootstrap();
             dbInit();
+            bootstrap();            
             //dbAddStudent('John', 'Smith', '12455875', 'johnsmith@google.com', '0402125487802');
         }, false);
     } else {

@@ -8,29 +8,33 @@
         </div>
         <ul data-role="listview" data-style="inset">
             <li>
-                <label><span> First Name </span><input name="FirstName" type="text" data-bind="value: firstName" placeholder="first Name" required /></label>
-            </li>
-            <li>
-                <label><span> Last Name</span><input name="LastName" type="text" data-bind="value: lastName" placeholder="Last Name" required /></label>
-            </li>
-            <li>
                 <label>
-                    <span> Id </span> <input name="StudentId" type="text" data-bind="value: studentId" required/>
+                    <span> First Name </span><input name="FirstName" type="text" data-bind="value: firstName" placeholder="First Name" required />
                 </label>
             </li>
             <li>
                 <label>
-                    <span> Email </span> <input name="Email" type="email" data-bind="value: email" required/>
+                    <span> Last Name</span><input name="LastName" type="text" data-bind="value: lastName" placeholder="Last Name" required />
                 </label>
             </li>
             <li>
                 <label>
-                    <span> Mobile </span><input name="Mobile" type="text" data-bind="value: mobile" required />
+                    <span> Student Id </span> <input name="StudentId" type="text" maxlength="8" data-bind="value: studentId" placeholder="Student Id" required />
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span> Email </span> <input name="Email" type="email" data-bind="value: email" placeholder="Email" />
+                </label>
+            </li>
+            <li>
+                <label>
+                    <span> Mobile </span><input name="Mobile" type="text" maxlength="12" data-bind="value: mobile" placeholder="Mobile Number" required />
                 </label>
             </li>
             <li>
                 <!--The form button can be inside or outside the form
-                but use the class and pass km styling atributtes and a bind to click function-->
+            but use the class and pass km styling atributtes and a bind to click function-->
                 <button data-role="button" class="km-primary km-large km-justified" data-bind="click: createStudent">Create</button>
             </li>
         </ul>
